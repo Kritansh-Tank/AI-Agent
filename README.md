@@ -1,10 +1,10 @@
 # AI-Agent
 
-Project Overview:
+## Project Overview:
 
 I had to create an AI agent that reads through a dataset (CSV or Google Sheets) and performs a web search to retrieve specific information for each entity in a chosen column. The AI will leverage an LLM to parse web results based on the user's query and format the extracted data in a structured output. The project includes building a simple dashboard where users can upload a file, define search queries, and view/download the results. 
 
-Key Features & Requirements -
+## Key Features & Requirements -
 Here’s a breakdown of each feature I’ll be building, along with details on the expected outcome for each -
 
 1. Dashboard for File Upload and Google Sheets Connection 
@@ -47,7 +47,7 @@ Here’s a breakdown of each feature I’ll be building, along with details on t
                  (ii) Offer an option to download the results as a CSV or update a connected Google Sheet with the extracted information. 
 	c. Technical Details: Provide a “Download CSV” button and an option to update the Google Sheet.  
 
-Technical Stack Suggestions -
+## Technical Stack Suggestions -
 Below is a list of recommended technologies: 
 ●	Dashboard/UI: Streamlit, Flask
 ●	Data Handling: pandas for CSV files; Google Sheets API for Sheets
