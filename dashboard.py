@@ -1,19 +1,20 @@
 import streamlit as st
 import pandas as pd
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 import requests
 import json
 import time
 import random
-from bs4 import BeautifulSoup
 import re
-from googletrans import Translator
+import os
+from bs4 import BeautifulSoup
 from langdetect import detect
+from googletrans import Translator
 from ratelimit import limits, sleep_and_retry
+from oauth2client.service_account import ServiceAccountCredentials
 
-LLM_API_URL = "https://api.cohere.com/v2/chat"
-LLM_API_KEY = "RxjvjLemLi8p3OSraAGttFOST92IA2cDMsIZBm73"
+LLM_API_URL = "<<your-api-endpoint-url-here>>"
+LLM_API_KEY = "<<your-api-key-here>>"
 
 def extract_information_using_llm(prompts):
     responses = []
@@ -65,8 +66,8 @@ def extract_information_using_llm(prompts):
 
     return responses
 
-SCRAPER_API_KEY = "c10cde3c8cd1586c978936e1c8166411"
-SCRAPER_API_URL = "http://api.scraperapi.com/"
+SCRAPER_API_URL = "<<your-api-endpoint-url-here>>"
+SCRAPER_API_KEY = "<<your-api-key-here>>"
 
 # Function to extract text from raw HTML using BeautifulSoup
 def extract_text_from_html(raw_html):
@@ -196,7 +197,7 @@ def execute_web_search(data, main_column, query_template, scraper_api_key, scrap
 # Google Sheets API Setup
 def authenticate_google_sheets():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("google_sheets_creds.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
     client = gspread.authorize(creds)
     return client
 
