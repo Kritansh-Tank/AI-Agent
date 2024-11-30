@@ -49,9 +49,9 @@ Here’s a breakdown of each feature I’ll be building, along with details on t
 
 ## Technical Stack Suggestions -
 Below is a list of recommended technologies: 
-●	Dashboard/UI: Streamlit, Flask
-●	Data Handling: pandas for CSV files; Google Sheets API for Sheets
-●	Search API: SerpAPI, ScraperAPI, or another search service
-●	LLM API: Groq or OpenAI’s GPT API
-●	Backend: Python
-●	Agents: Langchain
+1. Dashboard/UI: Streamlit, Flask
+2. Data Handling: pandas for CSV files; Google Sheets API for Sheets
+3. Search API: SerpAPI, ScraperAPI, or another search service
+4. LLM API: Groq or OpenAI’s GPT API
+5. Backend: Python
+6. Agents: Langchain
